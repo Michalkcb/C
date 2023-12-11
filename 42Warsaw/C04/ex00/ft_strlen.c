@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbany <mbany@student.42warsaw.pl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 14:47:37 by mbany             #+#    #+#             */
-/*   Updated: 2023/12/05 15:49:39 by mbany            ###   ########.fr       */
+/*   Created: 2023/12/02 14:32:56 by mbany             #+#    #+#             */
+/*   Updated: 2023/12/04 10:05:23 by mbany            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
 }
 
- int main (void)
- {
- 	ft_putchar('c');
- 	return (0);
-}
+// #include <stdio.h>
+// int main ()
+// {
+//     char string[] = "ieu";
+//     printf("%d", ft_strlen(string));
+// }
